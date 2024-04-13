@@ -1,0 +1,26 @@
+#define LED_PIN 8
+#define BUTTON_PIN 7
+#define BUZZER_PIN 8
+const int volumeLevel=512;
+void setup() {
+ // put your setup code here, to run once:
+  pinMode(LED_PIN, OUTPUT);
+ pinMode(BUTTON_PIN, INPUT);
+ pinMode(BUZZER_PIN, OUTPUT);
+ analogWrite(BUZZER_PIN, volumeLevel );
+}
+
+
+void loop() {
+ // put your main code here, to run repeatedly:
+  if (digitalRead(BUTTON_PIN) == HIGH){
+   digitalWrite(LED_PIN, HIGH);
+   //tone(BUZZER_PIN, 6000);
+   delay(500);
+   digitalWrite(LED_PIN, LOW);
+   delay(500);
+ }
+ else{
+   digitalWrite(LED_PIN, LOW);
+ }
+}
