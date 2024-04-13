@@ -1,1 +1,1 @@
-# Hard-Hacks-2024
+# Hard-Hack-2024
